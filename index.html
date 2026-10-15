@@ -143,6 +143,75 @@
         0 0 5px #176b3a,
         0 0 10px #176b3a;
 }
+/* Đàn chim bay trên bầu trời */
+.dan-chim {
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.chim {
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    scale: -1 1;
+    animation: chimBay 12s linear infinite;
+    will-change: transform;
+}
+
+.chim1 {
+    top: 10px;
+    animation-delay: 0s;
+}
+
+.chim2 {
+    top: 30px;
+    animation-delay: 1s;
+}
+
+.chim3 {
+    top: 0;
+    animation-delay: 2s;
+}
+
+.chim4 {
+    top: 45px;
+    animation-delay: 3s;
+}
+
+.chim5 {
+    top: 20px;
+    animation-delay: 4s;
+}
+
+@keyframes chimBay {
+    0% {
+        left: 0;
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        left: calc(100vw - 50px);
+        transform: translateY(0);
+    }
+}
+
     
 </style>
 <body>
@@ -171,6 +240,15 @@
     <div class="cobui">🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱</div>
     
     <div class="hoabui">🌼 🌼 🌼 </div>
+    <!-- Đàn chim hoạt hoạ vỗ cánh -->
+     <div class="dan-chim">
+    <span class="chim chim1">🐦</span>
+    <span class="chim chim2">🐦</span>
+    <span class="chim chim3">🐦</span>
+    <span class="chim chim4">🐦</span>
+    <span class="chim chim5">🐦</span>
+</div>
+     
     <footer class="chantrang"> <i>🌿 Thiết kế và thực hiện: ChiLeNguyen 🎵</i>
     
 </footer>
